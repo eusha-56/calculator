@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+
+@media (max-width: 5.5cm){
+    .button{
+        font-size: 0.5em;
+    }
+    .right_buttons button{
+        font-size: 0.75em;
+    }
+}
+
+@media (max-width: 7cm){
+    .button{
+        font-size: 0.6em;
+    }
+    .right_buttons button{
+        font-size: 1em;
+    }
+}
+
+@media(min-width: 7cm){
+    .right_buttons button{
+        font-size: 1.5em;
+    }
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.calculator{
+    background: #888;
+    max-width: 8cm;
+    width: 90%;
+    padding: 0.5cm;
+    border: 3px solid black;
+    border-radius: 0.5cm;
+}
+.screen{
+    height: 1.5cm;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 0.5cm;
+}
+.button, .delete, .clear {
+    user-select: none;
+    border-radius: 10px;
+    margin: 5px;
+    border-top: none;
+    border-left: none;
+    border-bottom: 3px solid #000;
+    border-right: 3px solid #000;
+    font-weight: 900;
+}
+.input{
+    height: 50%;
+    padding-right: 0.1cm;
+    border: none;
+    text-align: right;
+    overflow-y: hidden;
+}
+.input:focus{
+    outline: none;
+}
+.result{
+    height: 50%;
+    background: white;
+    text-align: right;
+    padding-right: 0.1cm;
+}
+
+.button:active,.delete:active,.clear:active{
+    border-top: 3px solid #000;
+    border-left: 3px solid #000;
+    border-bottom: none;
+    border-right: none;
+}
+.button:hover,.delete:hover,.clear:hover{
+    cursor: pointer;
+}
+.buttons{
+    display: grid;
+    grid-template-columns: 80% 15%;
+    grid-gap: 5%;
+    overflow: hidden;
+}
+.left_buttons{
+    display: grid;
+    grid-template-columns: 33.3333% 33.3333% 33.3333%;
+}
+.left_buttons button{
+    aspect-ratio: 1/1;
+}
+.clear{
+    background: #f76400;
+}
+.delete{
+    background: #efb701;
+}
+.right_buttons{
+    display: grid;
+}
